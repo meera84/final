@@ -224,7 +224,7 @@ app.use(passport.session());
       fetch("https://twelve-data1.p.rapidapi.com/stocks?exchange=NASDAQ&format=json", {
       "method": "GET",
       "headers": {
-        "x-rapidapi-key": "a7359cb6fcmsh9b44c6923778c4cp14b72ajsn66354aaf1f49",
+        "x-rapidapi-key": process.env.rapidAPI,
         "x-rapidapi-host": "twelve-data1.p.rapidapi.com"
       }
       })
@@ -245,8 +245,8 @@ app.use(passport.session());
       fetch(`https://twelve-data1.p.rapidapi.com/quote?symbol=${payload}&interval=1day&format=json&outputsize=300`, {
         "method": "GET",
         "headers": {
-          //"x-rapidapi-key": "bca9a7ec02mshfd2ac7f7572c44ep15378ajsn5e3feca2e30e",
-          "x-rapidapi-key": "a7359cb6fcmsh9b44c6923778c4cp14b72ajsn66354aaf1f49",
+          //"x-rapidapi-key": process.env.rapidAPI1,
+          "x-rapidapi-key": process.env.rapidAPI,
           "x-rapidapi-host": "twelve-data1.p.rapidapi.com"
         }
       })
@@ -287,8 +287,8 @@ app.use(passport.session());
     fetch(`https://twelve-data1.p.rapidapi.com/quote?symbol=${symbol}&interval=1day&format=json&outputsize=300`, {
           "method": "GET",
           "headers": {
-          // "x-rapidapi-key": "bca9a7ec02mshfd2ac7f7572c44ep15378ajsn5e3feca2e30e",
-            "x-rapidapi-key": "a7359cb6fcmsh9b44c6923778c4cp14b72ajsn66354aaf1f49",
+           //"x-rapidapi-key": process.env.rapidAPI1,
+           "x-rapidapi-key": process.env.rapidAPI,
             "x-rapidapi-host": "twelve-data1.p.rapidapi.com"
           }
         })
